@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.baiduplatform">
+    <!-- 权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SwitchActivity">
+
+        </activity>
+        <activity android:name=".ProgressActivity">
+
+        </activity>
+        <activity android:name=".ScrollActivity">
+
+        </activity>
+        <activity android:name=".RatingBarActivity">
+
+        </activity>
+        <activity android:name=".ListviewActivity">
+
+        </activity>
+        <activity android:name=".ListAddDelActivity">
+
+        </activity>
+        <activity android:name=".view.ListAddDel2Activity">
+
+        </activity>
+        <activity android:name=".SpinnerActivity">
+
+        </activity>
+        <activity android:name=".PopActivity">
+
+        </activity>
+        <activity android:name=".ViewPageActivity">
+
+        </activity>
+        <activity android:name=".EditActivity">
+
+        </activity>
+        <activity android:name=".OftenActivity">
+
+        </activity>
+        <activity android:name=".Service1Activity">
+        </activity>
+        <activity android:name=".Service2Activity">
+
+        </activity>
+        <activity android:name=".Service3Activity">
+
+        </activity>
+        <activity android:name=".BroadcastActivity">
+
+        </activity>
+        <activity android:name=".Broadcast1Activity">
+
+        </activity>
+        <activity android:name=".Broadcast2Activity">
+
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <!-- 配置Service组件,同时配置一个action -->
+        <service android:name=".service.TestService1">
+            <intent-filter>
+                <action android:name="com.example.baiduplatform.service.TEST_SERVICE1"/>
+            </intent-filter>
+        </service>
+        <service android:name=".service.TestService2">
+            <intent-filter>
+                <action android:name="com.example.baiduplatform.service.TEST_SERVICE2"/>
+            </intent-filter>
+        </service>
+        <service android:name=".service.TestService3" android:exported="false">
+            <intent-filter >
+                <action android:name="com.example.baiduplatform.service.intentservice"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".broadcast.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name = "android.intent.cation.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".broadcast.MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.MY_BROADCAST"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".broadcast.MyBcReceiver">
+            <intent-filter>
+                <action android:name="com.example.broadcasttest.LOGIN_OTHER"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
